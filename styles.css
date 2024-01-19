@@ -1,0 +1,437 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+#home h2, #home p {
+    text-align: center;
+}
+
+header {
+    background: #ffffff;
+    color: #fff;
+    text-align: center;
+    
+}
+header img {
+    height: 100px; /* Adjust as needed */
+    width: auto;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f80202; /* Change this color to your preferred hover color */
+}
+
+/*GET a Quote*/
+.center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack boxes vertically */
+    padding: 10px;
+    color: #000;
+}
+/* Link styles */
+.quote-container a, .call-container a {
+    color: black; /* Set link color to black */
+    text-decoration: none; /* Remove underline from links */
+}
+
+
+.quote-container , .call-container {
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+
+.quote-container:hover, .call-container:hover {
+    transform: scale(1.05); /* Slightly enlarge the boxes */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow size */
+}
+
+@media screen and (max-width: 768px) {
+    .center-section {
+        height: auto;
+    }
+    .quote-container, .call-container {
+        width: 80%; /* Adjust width on smaller screens */
+    }
+}
+
+
+/*Section*/
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+/*Img slider*/
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+}
+
+.slides .slide {
+    display: none;
+    width: 100%;
+}
+
+.slides .slide img {
+    width: 100%;
+    height: 400px;
+    filter: brightness(50%);
+}
+/* Slider Text */
+.slider .caption {
+    position: absolute;
+    left: 0; /* Align to the left edge of the slider */
+    right: 0; /* Align to the right edge of the slider */
+    bottom: 10px; /* Position from the bottom */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%; /* Set width to 100% of the slider */
+    transform: none; /* Remove the horizontal translate */
+}
+
+/* Ensure the style is consistent on smaller screens */
+@media screen and (max-width: 414px) {
+    .slider .caption {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+
+/*Style for Steps and Quote*/
+
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+.step img {
+    border-radius: 50%; /* Circular shape */
+    padding: 20px; /* Adjust padding as necessary */
+    width: 100px; /* Adjust width for circle size */
+    height: 100px; /* Adjust height for circle size */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center;
+    margin: 10px auto; /* Center the step and add margin */
+    width: 90px; /* Adjust to your preferred size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the icon and text */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow size */
+
+}
+
+.step img:hover {
+    transform: scale(1.05); /* Slightly enlarge the boxes */
+    box-shadow: 0 6px 12px rgba(227, 18, 18, 0.3); /* Increase shadow size */
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .step {
+        flex-basis: 100%; /* Full width for smaller screens */
+        display: flex;
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: center; /* Center-align items horizontally */
+        justify-content: center; /* Center-align items vertically */
+    }
+}
+
+
+/*Services Images and Text*/
+
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.service {
+    width: 30%; /* Adjust based on desired size and spacing */
+    height: 200px; /* Adjust height as needed */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .service {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px; /* Add space between stacked items */
+    }
+}
+
+.service span {
+    color: rgb(255, 255, 255); /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Transition for text background color */
+}
+.service:hover {
+    transform: scale(1.05); /* Zoom in effect */
+    box-shadow: 0 4px 8px rgba(241, 14, 14, 0.2); /* Shadow effect for depth */
+    cursor: pointer;
+}
+
+.service:hover span {
+    background-color: rgb(0, 0, 0); /* Darker background on hover */
+}
+
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/*Style Section*/
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+form button {
+    padding: 10px 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*Style for Services Page*/
+
+
+.services, h2, p{
+    text-align: center;
+}
+.service-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.service-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+}
+
+.service-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.fas {
+    margin-right: 10px;
+}
+.service-description{
+    text-align: center;
+    font-size: large;
+    background-color: #f4f4f4;
+}
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start; /* Align items to the top */
+    flex-wrap: wrap;
+}
+
+.service-item {
+    flex-basis: 30%; /* Adjust the width of each service item */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center-align items */
+}
+
+.service-item img {
+    width: auto; /* Maintain original aspect ratio */
+    height: 150px; /* Set a fixed height */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.service-item p {
+    margin-top: auto; /* Push text to the bottom */
+    width: 100%; /* Ensure text is aligned with the width of the image */
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex-basis: 100%; /* Full width on smaller screens */
+    }
+}
+
+/*Style About us*/
+
+
+.about, h2{
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align:center;
+}
+.about, p{
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.about-footer{
+    padding: 10px 0;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.about-footer,p{
+    text-align: center;
+}
+/*Style Footer*/
+.footer {
+    color: white;
+    background-color: #333; /* Example background color */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around; /* Evenly space content */
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+.footer-section {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Add vertical space when wrapped */
+}
+.footer a, footer button{
+    color: rgb(255, 255, 255);
+    padding: 10px 15px; /* Adjust padding to make the button larger */
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.footer a:hover, .footer button:hover {
+    color: #ea0606; /* Change color on hover */
+}
+/* Responsive behavior */
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+    .footer {
+        flex-direction: column; /* Stack items vertically */
+    }
+    
+    .footer-section {
+        justify-content: center; /* Center items in their container */
+        width: 100%; /* Full width for each section */
+    }
+}
+/*Advantages*/
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Make height responsive */
+    background-size: cover;
+    background-position: center;
+}
+.image-container img{
+    width: 100%;
+    height: auto; /* Make height responsive */
+    filter: brightness(30%);
+}
+
+.table-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 600px; /* Maximum width of the table overlay */
+    width: 90%; /* Responsive width */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.table-overlay table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-overlay td {
+    padding: 8px; /* Padding around table cells */
+    border-bottom: 1px solid #fff; /* Bottom border for each cell */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .table-overlay {
+        width: 95%; /* Slightly wider on smaller screens */
+        padding: 5px; /* Less padding on smaller screens */
+    }
+
+    .table-overlay td {
+        padding: 5px; /* Smaller padding for table cells */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .table-overlay td {
+        font-size: 12px; /* Even smaller font size for very small screens */
+    }
+}
+
