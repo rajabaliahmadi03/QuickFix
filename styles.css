@@ -381,7 +381,7 @@ form button {
 .image-container {
     position: relative;
     width: 100%;
-    height: auto; /* Make height responsive */
+    height: 200px; /* Make height responsive */
     background-size: cover;
     background-position: center;
 }
